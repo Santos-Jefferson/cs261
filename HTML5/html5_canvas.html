@@ -10,13 +10,13 @@ Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
 var c1 = document.getElementById("myCanvas1");
-var ctx1 = c.getContext("2d");
+var ctx1 = c1.getContext("2d");
 ctx.moveTo(0,0);
 ctx.lineTo(200,100);
 ctx.stroke();
 
 var c2 = document.getElementById("myCanvas2");
-var ctx2 = c.getContext("2d");
+var ctx2 = c2.getContext("2d");
 ctx.beginPath();
 ctx.arc(95,50,40,0,2*Math.PI);
 ctx.stroke();
