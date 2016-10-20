@@ -13,18 +13,13 @@
     ***********************************************************/
     function login()
     {
-        //Declaring variables to username and password from HTML
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-
-        //Setting localStorage for username and password
-        localStorage.username = username;
-        localStorage.password = password;
+        //setting to localStorage.username and .password from HTML
+        localStorage.username = document.getElementById('username').value;
+        localStorage.password = document.getElementById('password').value;
 
         //Verifying if the localStorage storages the variables username and password
         document.getElementById('usernameDiv').innerHTML = localStorage.username;
         document.getElementById('passwordDiv').innerHTML = localStorage.password;
-
     }
 
 </script>
@@ -32,10 +27,9 @@
     <h1>WELCOME TO THE BUDGET APP</h1><br />
     username:    <input type="text" id="username" /><br />
     password: <input type="password" id="password" /><br /><br />
-    <button type="button" onclick="login()">ENTER</button><br /><br />
+    <button type="button" onclick="login()">LOGIN and TEST</button><br /><br />
     Let's confirm if the localStorage works!<br />
     Username is: <div id="usernameDiv"></div>
     Password is: <div id="passwordDiv"></div>
-
 </body>
 </html>
