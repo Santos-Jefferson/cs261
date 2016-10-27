@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+    <script>
+        var arrayInt = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+        //FOR looping
+        document.write("<hr><b>Example of FOR LOOPING with a ARRAY of 10 positions (1 to 10)</b><br>");
+        for (var i = 0; i < 10; i++)
+        {
+            document.write(arrayInt[i]);
+        }
+        
+        //CONDITIONAL statements
+        document.write("<br><br><hr><b>Example of IF STATEMENT with a ARRAY of 10 positions, IF equals IfNum or ifNum+1 (1 to 10)<br></b>");
+        var ifNum = 5;
+        for (var i = 0; i < 10; i++)
+        {
+            if (arrayInt[i] == ifNum)
+            {
+                document.write("OK - " + arrayInt[i] + "<br>");
+            }
+            else if (arrayInt[i] == (ifNum + 1)) {
+                document.write("OK - " + arrayInt[i] + "<br>");
+            }
+            else {
+                document.write("NO - ArrayInt[" + i + "]" + "=" + arrayInt[i] + "<br>");
+            }
+        }
+
+        //FUNCTIONS with parameters
+        document.write("<br><br><hr><b>Example of FUNCTION with PARAMETERS AND VARIABLES (x = 5, y = 2)<br></b>");
+
+        function add(x,y)
+        {
+            return x + y;
+        }
+
+        function sub(x, y)
+        {
+            return x - y;
+        }
+
+        document.write("x + y = " + add(5, 2) + "<br>");
+        document.write("x - y = " + sub(5, 2) + "<br><hr>");
+     </script>
+</head>
+<body>
+
+</body>
+</html>
