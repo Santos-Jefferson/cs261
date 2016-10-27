@@ -16,20 +16,52 @@
         //setting to localStorage.username and .password from HTML
         localStorage.username = document.getElementById('username').value;
         localStorage.password = document.getElementById('password').value;
-
         //Verifying if the localStorage storages the variables username and password
         document.getElementById('usernameDiv').innerHTML = localStorage.username;
         document.getElementById('passwordDiv').innerHTML = localStorage.password;
     }
 
+    /********************************************************
+    FUNCTION: arrayJSON()
+    This function will set two arrays (strings and numbers)
+    It will storage them to localStorage.access and .numbers
+    ***********************************************************/
+    function arrayJSON()
+    {
+        var access = ['Jefferson', 'CS 261'];
+        var numbers = [1, 3, 5, 7, 9];
+
+        //store array data to the localstorage
+        localStorage.setItem("stringsArray", JSON.stringify(access));
+        localStorage.setItem("numbersArray", JSON.stringify(numbers));
+
+        //JSON to retrieve the stored data and convert it
+        var storedDataAccess = localStorage.getItem(access);
+        var storedDataNumbers = localStorage.getItem(numbers);
+
+        if (storedDataAccess && storedDataNumbers) {
+            access = JSON.parse(storedDataAccess);
+            numbers = JSON.parse(storedDataNumbers);
+        }
+        window.alert("Strings are: " + access);
+        window.alert("Numbers are: " + numbers);
+
+    }
+
 </script>
 <body>
-    <h1>WELCOME TO THE BUDGET APP</h1><br />
+    <hr />
+    <h1>WELCOME TO THE BUDGET APP</h1>
     username:    <input type="text" id="username" /><br />
     password: <input type="password" id="password" /><br /><br />
     <button type="button" onclick="login()">LOGIN and TEST</button><br /><br />
     Let's confirm if the localStorage works!<br />
     Username is: <div id="usernameDiv"></div>
-    Password is: <div id="passwordDiv"></div>
+    Password is: <div id="passwordDiv"></div><br />
+    <hr />
+    <h1></h1>Storing objects and retrieving them and parse.<br /><br />
+    <button type="button" onclick="arrayJSON()">TEST</button>
+    <hr />
+    
 </body>
 </html>
