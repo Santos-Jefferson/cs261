@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
+    <TITLE></TITLE>
+</HEAD>
+<BODY>
+    <!--
+        insertBefore
+    -->
+    <ul id="list1">
+        <li>Wage</li>
+        <li>Rents</li>
+        <li>Salary</li>
+    </ul>
+
+    <p>Insert a item to the list</p>
+
+    <button onclick="myFunction1()">INSERT</button><hr />
+
+
+    <!--
+        removeChild
+    -->
+    <ul id="list2"><li>Wages</li><li>Salary</li><li>Rents</li></ul>
+
+    <p>Remove the first item (List above)</p>
+
+    <button onclick="myFunction2()">REMOVE IT</button><hr />
+
+    <!--
+         createElement
+     -->
+    <button onclick="myFunction3()">Try it</button><br /><br />
+    
+    <!--
+        FUNCTIONS HERE
+     -->
+
+    <script>
+        
+        function myFunction1() {
+            var newItem = document.createElement("LI");
+            var textnode = document.createTextNode("Expenses");
+            newItem.appendChild(textnode);
+
+            var list = document.getElementById("list1");
+            list.insertBefore(newItem, list.childNodes[6]);
+        }
+
+        function myFunction2() {
+            var list = document.getElementById("list2");
+            list.removeChild(list.childNodes[0]);
+        }
+
+        function myFunction3() {
+            var btn = document.createElement("BUTTON");
+            var t = document.createTextNode("CLICK ME");
+            btn.appendChild(t);
+            document.body.appendChild(btn);
+        }
+
+    </script>
+
+
+
+</BODY>
+</HTML>
