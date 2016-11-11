@@ -1,0 +1,36 @@
+
+<HTML>
+<HEAD>
+    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
+<title>Manipulating CSS Class Properties Using JavaScript</title>
+    <script>
+
+        function format() {
+            document.getElementById("body").style.backgroundColor = "#ff0000";
+            document.getElementById("body").style.fontSize = "250%";
+            document.getElementById("body").style.fontFamily = "Arial";
+            document.getElementById("body").style.color = "white";
+
+            document.getElementById("body2").style.backgroundColor = "green";
+            document.getElementById("body2").style.fontSize = "450%";
+            document.getElementById("body2").style.fontFamily = "Verdana";
+            document.getElementById("body2").style.color = "yellow";
+        }
+            
+    </script>
+    
+</head>
+
+    <body onload="format()">
+
+        <div id="body">
+            Testing first CSS being manipulated by JavaScript
+        </div>
+        <br />
+        <div id="body2">
+            Testing second CSS being manipulated by JavaScript
+        </div>
+        
+
+    </body>
+</HTML>
