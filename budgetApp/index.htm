@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //This function validate a simple user and pass to user the app.
+        //(user must be budget and pass too)
+        function validateUserPass()
+        {
+            var user = document.getElementById("userHtml").value;
+            var pass = document.getElementById("passHtml").value;
+
+            if ((user == "budget") && (pass == "budget"))
+            {
+                window.open("dashboard.htm");
+            }
+            else
+            {
+                window.alert("***User and Password incorrect***\nLogin = budget, Password = budget");
+            }                
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Budget App 1.0</h1>
+    <h2>CS 261 Group 7</h2>
+    <h3>Dimitriy, Kylie, Jefferson </h3>
+    Login:<br>
+    <input type="text" id="userHtml">
+    <br>
+    Password:<br>
+    <input type="password" id="passHtml"><br /><br />
+    <button type="button" onclick="validateUserPass()">Login</button>
+    <br /><br />
+</body>
+</html>
