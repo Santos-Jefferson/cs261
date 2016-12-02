@@ -1,30 +1,30 @@
 [
 {
-"display": "HTML Tutorial",
-"url": "http://www.w3schools.com/html/default.asp"
+"display": "CSS",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/CSS"
 },
 {
-"display": "CSS Tutorial",
-"url": "http://www.w3schools.com/css/default.asp"
+"display": "CSS3",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/CSS3"
 },
 {
-"display": "JavaScript Tutorial",
-"url": "http://www.w3schools.com/js/default.asp"
+"display": "DOM",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/DOM"
 },
 {
-"display": "jQuery Tutorial",
-"url": "http://www.w3schools.com/jquery/default.asp"
+"display": "HTML5",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/HTML5"
 },
 {
-"display": "SQL Tutorial",
-"url": "http://www.w3schools.com/sql/default.asp"
+"display": "LOCAL STORAGE",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/LOCALSTORAGE"
 },
 {
-"display": "PHP Tutorial",
-"url": "http://www.w3schools.com/php/default.asp"
+"display": "LOOPS ETC",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/LOOPS_ETC"
 },
 {
-"display": "XML Tutorial",
-"url": "http://www.w3schools.com/xml/default.asp"
+"display": "BUDGET APP",
+"url": "https://github.com/Santos-Jefferson/cs261/tree/master/budgetApp"
 }
 ]
