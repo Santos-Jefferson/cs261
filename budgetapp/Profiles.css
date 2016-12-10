@@ -1,0 +1,130 @@
+html {
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #333;
+}
+
+body {
+	background: #ccc; margin: 0;
+}
+
+#container {
+	width: 600px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+#header {
+	width: 100%;
+	height: 60px;
+	border-bottom:1px solid #c7c7c7;
+	background: #333;
+}
+
+#logo {
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+#top_info {
+	float: right;
+	width: 200px;
+	height: 40px;
+	background: #666;
+	border: 1px solid #c7c7c7;
+	margin: 10px;
+	color: lightblue;
+}
+
+#navbar {
+	height: 20px; 
+	clear: both;	 
+}
+
+#navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navbar ul li {
+	float: left;
+	padding: 10px;
+}
+
+#navbar ul li a {
+	font-size: 12px;
+	float: left;
+	float: left;
+	display: block;
+	padding: 0 0 0 20px;
+}
+
+#banner {
+	background: #666;
+	height: 120px;
+	clear: both;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	background: #fff  url("../Images/kyle.jpg") no-repeat center center;
+	background-size: cover;
+	padding: 1em;
+	position: relative;
+	overflow: hidden;
+	color: white;
+	
+}
+
+.box_two {
+	width: 200px;
+	height: 200px;
+	background: #fff  url("../Images/dmitriy.jpg") no-repeat center center;
+	background-size: cover;
+	padding: 1em;
+	position: relative;
+	overflow: hidden;
+	color: white;
+	
+}
+
+.box_three {
+	width: 200px;
+	height: 200px;
+	background: #fff  url("../Images/jefferson.png") no-repeat center center;
+	background-size: cover;
+	padding: 1em;
+	position: relative;
+	overflow: hidden;
+	color: white;
+	
+}
+			
+.inner_box{
+	border: 1px solid #333;
+	width: 198px;
+	padding: 1em;
+	position: absolute;
+	bottom: -60px;
+	background: #fff;
+	left: 0;
+	-webkit_transition: bottom 1s ease-out 0, background 1s ease-in 0;
+	-moz-transition: bottom 1s ease-out 0, background 1s ease-in 0;
+	transition: bottom 1s ease-out 0, background 1s ease-in 0;
+}
+			
+.box:hover .inner_box {
+	bottom: 0;
+	background: rgba(255,255,255,.3);
+}
+
+.box_two:hover .inner_box {
+	bottom: 0;
+	background: rgba(255,255,255,.3);
+}
+
+.box_three:hover .inner_box {
+	bottom: 0;
+	background: rgba(255,255,255,.3);
+}

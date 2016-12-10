@@ -1,4 +1,64 @@
+#container {
+	width: 475px;
+	margin: 0 auto;
+	background: #fff;
+
+}
+
+
+
+}#header {
+	width: 100%;
+	height: 60px;
+	border-bottom:1px solid #c7c7c7;
+	background: #333;
+}
+
+#logo {
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+#top_info {
+	float: right;
+	width: 200px;
+	height: 40px;
+	background: #666;
+	border: 1px solid #c7c7c7;
+	margin: 10px;
+	color: lightblue;
+}
+
+#navbar {
+	height: 20px; 
+
+	clear: both;	 
+}
+
+#navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navbar ul li {
+	padding: 10px;
+	float: left;
+}
+
+#navbar ul li a {
+	font-size: 12px;
+	float: left;
+	display: block;
+	padding: 0 0 0 20px;
+}
+
+
 /* CSS for classes */
+#container2{
+	clear: left;
+	
+}
 .text-center2 {
     text-align: center;
    	margin-left: 35%;
@@ -168,3 +228,5 @@ button:hover {
 	label {width:69%;}
 	button {width:auto;}
 }
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
