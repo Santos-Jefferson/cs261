@@ -1,160 +1,178 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="JavaScript.js"></script>
-    <title></title>
-	<meta charset="utf-8" />
-    <style type="text/css">
-        .auto-style1 {
-            width: 135px;
-        }
-
-        .text_aline {
-            text-align: right;
-
-        }
-    </style>
+    <title>Budget Calculator</title>
 </head>
 <body>
-    &nbsp;SELECT THE MONTH:<br />
-    <br />
+    <div id="check" class="check"></div>
+    <div id="arr"></div>
+    <div id="stor"></div>
 
-    <select id="month" name="month" onclick="getMonth()">
-        <option value="jan">January</option>
-        <option value="feb">February</option>
-        <option value="mar">March</option>
-        <option value="apr">April</option>
-        <option value="may">May</option>
-        <option value="jun">June</option>
-        <option value="jul">July</option>
-        <option value="aug">August</option>
-        <option value="sep">September</option>
-        <option value="oct">October</option>
-        <option value="nov">November</option>
-        <option value="dec">December</option>
+    <h2 id="h1-2" class="text-center1">Budget Calculator</h2>
+    <!-- @@@ -->
+    &nbsp;<p class="text-justify">SELECT THE MONTH:</p><br />
+    <br />
+    &nbsp;&nbsp;&nbsp;<select id="months" class="text-justify">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
     </select>
     <hr />
+    <p class="text-justify">
+        INCOMES
+    </p>
     <p>
-        INCOMES</p>
-
-    <p>
-        <table style="width: 18%;">
+        <table style="width: 50%;" class="text-justify">
             <tr>
                 <td>Salary</td>
                 <td align="right">
-                    <input class="text_aline"  id="salary" type="number"/></td>
-            </tr> 
+                    <input class="text_aline" id="salary" type="number" value="0" />
+                </td>
+            </tr>
             <tr>
                 <td>Rents</td>
                 <td align="right">
-                    <input class="text_aline" id="rents" type="number" /></td>
+                    <input class="text_aline" id="rents" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td>Interests</td>
                 <td align="right">
-                    <input class="text_aline"  id="interests" type="number" /></td>
+                    <input class="text_aline" id="interests" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td>Others</td>
                 <td align="right">
-                    <input class="text_aline"  id="others" type="number" /></td>
+                    <input class="text_aline" id="others" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" value="TOTAL" onclick="addingIncomes()" /></td>
+                    <input type="button" value="TOTAL" class="text-center" onclick="addingIncomes()" />
+                </td>
                 <td align="right">
                     <div id="total_incomes">
                     </div>
                 </td>
             </tr>
-            
+
         </table>
     </p>
     <hr />
+    <p class="text-justify">
+        EXPENSES
+    </p>
     <p>
-        EXPENSES</p>
-    <p>
-        <table style="width: 18%;">
+        <table style="width: 50%;" class="text-justify">
             <tr>
                 <td class="auto-style1">Tithing</td>
                 <td align="right">
-                    <input id="tithing" type="text" /></td>
+                    <input id="tithing" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Housing</td>
                 <td align="right">
-                    <input id="housing" type="text" /></td>
+                    <input id="housing" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Public Bills</td>
                 <td align="right">
-                    <input id="pub_bills" type="text" /></td>
+                    <input id="pub_bills" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Health</td>
                 <td align="right">
-                    <input id="health" type="text" /></td>
+                    <input id="health" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Education</td>
                 <td align="right">
-                    <input id="education" type="text" /></td>
+                    <input id="education" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Transportation</td>
                 <td align="right">
-                    <input id="transportation" type="text" /></td>
+                    <input id="transportation" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Store</td>
                 <td align="right">
-                    <input id="store" type="text" /></td>
+                    <input id="store" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">TV/Phone/Int</td>
                 <td align="right">
-                    <input id="tv_phone_int" type="text" /></td>
+                    <input id="tv_phone_int" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Taxes</td>
                 <td align="right">
-                    <input id="taxes" type="text" /></td>
+                    <input id="taxes" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Restaurants</td>
                 <td align="right">
-                    <input id="restaurants" type="text" /></td>
+                    <input id="restaurants" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Shops</td>
                 <td align="right">
-                    <input id="shops" type="text" /></td>
+                    <input id="shops" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Gifts</td>
                 <td align="right">
-                    <input id="gifts" type="text" /></td>
+                    <input id="gifts" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Personal Care</td>
                 <td align="right">
-                    <input id="personal_care" type="text" /></td>
+                    <input id="personal_care" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Services</td>
                 <td align="right">
-                    <input id="services" type="text" /></td>
+                    <input id="services" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Trips</td>
                 <td align="right">
-                    <input id="trips" type="text" /></td>
+                    <input id="trips" type="number" value="0" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">
-                    <input type="button" value="TOTAL" onclick="addingExpenses()" /></td>
+                    <input type="button" value="TOTAL" class="text-center" onclick="addingExpenses()" />
+                </td>
                 <td align="right">
-                    <div id ="total_expenses">
+                    <div id="total_expenses">
                     </div>
                 </td>
             </tr>
@@ -162,17 +180,150 @@
     </p>
     <hr />
     <p>
-        &nbsp;</p>
-    <table style="width: 18%;">
+        &nbsp;
+    </p>
+    <h1>
+        <div id="balance" class="text-justify">
+        </div>
+    </h1>
+    <table style="width: 87%;">
         <tr>
             <td class="auto-style1">
-                    <input type="button" value="BALANCE" onclick="balance()" /></td>
-            <td align="right">
-                <div id ="balance">
-                </div>
+                <input type="button" value="BALANCE" class="text-center5" onclick="balance()" />
             </td>
+            <td align="right"></td>
         </tr>
-        
+
     </table>
+
+
+    <!-- %%% -->
+
+    <button onclick="json()" class="text-center2">Instruction in 3 steps</button><br><br>
+    <i><div id="1" class="steps"></i></div><strong><p id="one" class="steps2"></p></strong>
+    <i><div id="2" class="steps"></div></i><strong><p id="two" class="steps2"></p></strong>
+    <i><div id="3" class="steps"></div></i><strong><p id="three" class="steps2"></p></strong>
+
+    <script>
+
+if (typeof(Storage) !== "undefined") {
+
+    localStorage.setItem("message", "Project App (team 7)");
+
+    document.getElementById("check").innerHTML = localStorage.getItem("message");
+
+    localStorage.removeItem("message");
+
+
+function json(){
+var json1L = '{"one":"Choose the month","two":"Enter your Income","three":"Enter your and Expances"}';
+
+var json2L = '{"e1":"Step one is","e2":"Step two is","e3":"Step three is"}';
+
+
+
+    localStorage.setItem('temp', json2L);
+    localStorage.setItem('temp2', json1L);
+
+var t;
+var t2;
+
+t = localStorage.getItem('temp');
+t2 = localStorage.getItem('temp2');
+
+var one = JSON.parse(t2);
+var two = JSON.parse(t);
+
+
+
+document.getElementById("one").innerHTML = one.one;
+document.getElementById("two").innerHTML = one.two;
+document.getElementById("three").innerHTML = one.three;
+
+document.getElementById("1").innerHTML = two.e1;
+document.getElementById("2").innerHTML = two.e2;
+document.getElementById("3").innerHTML = two.e3;
+
+
+}
+
+
+} else {
+    document.getElementById("check").innerHTML = "Sorry, your browser does not support Web Storage :(";
+}
+
+function compute(){
+    var income = parseFloat(document.getElementById('income').value);
+    var expenses = parseFloat(document.getElementById('expenses').value);
+
+var sum = income - expenses;
+
+document.getElementById('amount').innerHTML = "Your balance is " + sum + "$";
+}
+    </script>
+    <!--
+    <form>
+    <br>
+
+    <label>Name</label><input type="text" name="" id="" placeholder="name" required="true" size=50><br><br>
+    <label>Email</label><input type="email" name="" value="" placeholder="your@email.com" required="true" size=50><br><br>
+    <label>Income</label><input type="number" name="" id="income" placeholder="income in last month" required="true" ><br><br>
+    <label>Expenses</label><input type="number" name="expenses" id="expenses" placeholder="expenses in last month" required="true"><br><br>
+
+    <button type="button" class="text-center2" onclick="compute()">Compute balance</button><br><br>
+    <p id="amount" class="amount"></p>
+    <br><br>
+    </form>
+    -->
+    <p id="one2" class="text-justify"></p><br>
+    <p id="two2" class="text-justify"></p><br>
+    <p id="three2" class="text-justify"></p>
+    <script type="text/javascript">
+  function getJson() {
+
+
+var xmlhttp = new XMLHttpRequest();
+var url = "ajax-project.json";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var json1 = JSON.parse(this.responseText);
+        parsJson(json1);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+}
+function parsJson (json1){
+
+if (typeof(Storage) !== "undefined") {
+
+    localStorage.setItem('test', JSON.stringify(json1));
+
+var x;
+x = localStorage.getItem('test');
+
+
+
+var y = JSON.parse(x);
+document.getElementById("one2").innerHTML = y.one;
+document.getElementById("two2").innerHTML = y.two;
+document.getElementById("three2").innerHTML = y.three;
+
+
+
+} else {
+    document.getElementById("check").innerHTML = "Sorry, your browser does not support Web Storage :(";
+}
+}
+
+    </script>
+    <button type="button" onclick="getJson()" class="text-center">3 advice from Forbes how to manage budget</button>
+    <br><br><br><br>
+    <span class="video-title">Inspiring video :)</span>
+    <iframe title="YouTube video player" class="youtube-player" type="text/html"
+            width="445" height="200" src="https://www.youtube.com/embed/3n-DOKBffuU"
+            frameborder="0" allowFullScreen></iframe>
 </body>
 </html>
