@@ -1,3 +1,18 @@
+//This function validate a simple user and pass to user the app.
+//(user must be budget and pass too)
+function validateUserPass() {
+    var user = document.getElementById("userHtml").value;
+    var pass = document.getElementById("passHtml").value;
+
+    if ((user == "budget") && (pass == "budget")) {
+        window.open("form.htm");
+    }
+    else {
+        window.alert("***User and Password incorrect***\nLogin = budget, Password = budget");
+    }
+}
+
+
 function addingIncomes() {
     var inc = parseFloat(document.getElementById('salary').value) +
               parseFloat(document.getElementById('rents').value) +
